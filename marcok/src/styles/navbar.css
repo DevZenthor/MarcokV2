@@ -1,0 +1,55 @@
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: var(--yellow);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--red);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ICONS */
+.icon {
+  transition: 0.3s;
+}
+
+.youtube:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.twitch:hover {
+  color: #9146FF;
+  transform: scale(1.2);
+}
+
+.tiktok:hover {
+  color: #ff0050;
+  transform: scale(1.2);
+}

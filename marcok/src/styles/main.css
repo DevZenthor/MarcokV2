@@ -1,0 +1,20 @@
+@import "./variables.css";
+@import "./navbar.css";
+@import "./hero.css";
+@import "./twitch.css";
+@import "./videos.css";
+@import "./footer.css";
+
+/* GLOBAL */
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* SCROLL SMOOTH */
+html {
+  scroll-behavior: smooth;
+}

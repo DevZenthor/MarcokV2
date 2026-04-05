@@ -1,0 +1,17 @@
+.video-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.video-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 209, 0, 0.2);
+}
+
+.video-card h5 {
+  color: var(--yellow);
+}

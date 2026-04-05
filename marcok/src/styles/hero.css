@@ -1,0 +1,63 @@
+.hero {
+  height: 100vh;
+  background: radial-gradient(circle at center, #111 0%, #000 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* glow effects */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: var(--red);
+  filter: blur(150px);
+  top: -100px;
+  left: -100px;
+  opacity: 0.4;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--yellow);
+  filter: blur(120px);
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.4;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.hero-title span {
+  color: var(--yellow);
+  text-shadow: 0 0 20px var(--yellow);
+}
+
+.hero-subtitle {
+  color: var(--gray);
+}
+
+/* bouton glow */
+.btn-glow {
+  background: linear-gradient(45deg, var(--red), var(--yellow));
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-glow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--yellow);
+}

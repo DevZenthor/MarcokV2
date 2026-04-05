@@ -1,0 +1,12 @@
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--yellow);
+  text-shadow: 0 0 10px var(--yellow);
+}
+
+.twitch-box iframe {
+  border-radius: 20px;
+  border: 2px solid var(--yellow);
+  box-shadow: 0 0 40px rgba(255, 209, 0, 0.3);
+}
