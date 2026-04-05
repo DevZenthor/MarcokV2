@@ -1,12 +1,114 @@
-.section-title {
+/* =========================
+   SECTION TWITCH
+========================= */
+#twitch {
+  text-align: center;
+}
+
+/* =========================
+   TITRE LIVE / OFFLINE
+========================= */
+.live-wrapper {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--yellow);
-  text-shadow: 0 0 10px var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 2px;
+}
+
+/* 🔴 DOT LIVE ANIMÉ */
+.live-dot {
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+
+/* animation pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px red;
+  }
+  50% {
+    transform: scale(1.6);
+    box-shadow: 0 0 20px red;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px red;
+  }
+}
+
+/* OFFLINE STYLE */
+.offline-title {
+  font-size: 2.5rem;
+  color: #888;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   PLAYER TWITCH
+========================= */
+.twitch-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .twitch-box iframe {
   border-radius: 20px;
   border: 2px solid var(--yellow);
   box-shadow: 0 0 40px rgba(255, 209, 0, 0.3);
+  max-width: 900px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* petit effet hover */
+.twitch-box iframe:hover {
+  box-shadow: 0 0 60px rgba(255, 209, 0, 0.6);
+}
+
+/* =========================
+   OFFLINE BOX
+========================= */
+.offline-box {
+  margin-top: 30px;
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #777;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
+.offline-box:hover {
+  box-shadow: 0 0 25px rgba(255,255,255,0.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .live-wrapper {
+    font-size: 1.8rem;
+  }
+
+  .offline-title {
+    font-size: 1.8rem;
+  }
+
+  .twitch-box iframe {
+    height: 250px;
+  }
+
 }
