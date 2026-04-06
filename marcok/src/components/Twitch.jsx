@@ -9,7 +9,7 @@ function Twitch() {
     <div id="twitch" className="twitch-section">
 
       <h2 className="live-wrapper">
-        🔴 LIVE MARCOK
+        LIVE MARCOK
       </h2>
 
       <div className="twitch-container">
