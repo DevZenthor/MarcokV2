@@ -112,3 +112,11 @@
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .twitch-box iframe {
+    height: 250px;
+  }
+
+}

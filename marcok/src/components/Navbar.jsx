@@ -1,28 +1,53 @@
-import { FaTwitch, FaYoutube, FaTiktok } from "react-icons/fa";
+import { useState } from "react";
+import { FaBars, FaTimes, FaYoutube, FaTwitch, FaTiktok } from "react-icons/fa";
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const scrollTo = (id) => {
+    setOpen(false);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <nav className="navbar custom-navbar px-4 py-3">
-      <h2 className="logo">🔥 Streamer</h2>
+    <nav className="custom-navbar">
 
-      <div className="ms-auto d-flex align-items-center gap-4">
+      <div className="nav-container">
 
-        <span onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="nav-link">
-          Accueil
-        </span>
+        <h2 className="logo">MARCOK</h2>
 
-        <span onClick={() => document.getElementById("twitch").scrollIntoView()} className="nav-link">
-          Live
-        </span>
+        {/* BURGER */}
+        <div className="burger" onClick={() => setOpen(!open)}>
+          {open ? <FaTimes /> : <FaBars />}
+        </div>
 
-        <span onClick={() => document.getElementById("videos").scrollIntoView()} className="nav-link">
-          Vidéos
-        </span>
+        {/* MENU */}
+        <div className={`nav-menu ${open ? "active" : ""}`}>
 
-        <div className="d-flex gap-3 fs-5">
-          <FaYoutube className="icon youtube" />
-          <FaTwitch className="icon twitch" />
-          <FaTiktok className="icon tiktok" />
+          <span onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            Accueil
+          </span>
+
+          <span onClick={() => scrollTo("twitch")}>
+            Live
+          </span>
+
+          <span onClick={() => scrollTo("videos")}>
+            Vidéos
+          </span>
+
+          <div className="nav-icons">
+            <a href="https://www.youtube.com/@marcoktwitch" target="_blank">
+              <FaYoutube />
+            </a>
+            <a href="https://www.twitch.tv/marcok" target="_blank">
+              <FaTwitch />
+            </a>
+            <a href="https://www.tiktok.com/@marcokontwitch" target="_blank">
+              <FaTiktok />
+            </a>
+          </div>
+
         </div>
 
       </div>

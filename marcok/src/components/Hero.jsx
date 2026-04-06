@@ -1,26 +1,29 @@
+import logo from "../assets/logo.png";
+
 function Hero() {
   return (
     <div className="hero d-flex align-items-center justify-content-center text-center">
-      
-      <div className="hero-content">
-        <h1 className="hero-title">
-          STREAM LIKE A <span>PRO</span>
-        </h1>
 
-        <p className="hero-subtitle">
-          Gaming • Live • Highlights
+      <div className="hero-content">
+
+        {/* LOGO */}
+        <div className="logo-frame">
+          <img src={logo} alt="Marcok logo" className="hero-logo" />
+        </div>
+
+        <p className="hero-subtitle mt-4">
+          Twitch • YouTube • TikTok
         </p>
 
-        <div className="mt-4">
-          <button
-            onClick={() =>
-              document.getElementById("twitch").scrollIntoView({ behavior: "smooth" })
-            }
-            className="btn btn-glow"
-          >
-            🔴 Voir le live
-          </button>
-        </div>
+        <button
+          className="btn btn-glow mt-4"
+          onClick={() =>
+            document.getElementById("twitch").scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          🔴 Regarder le live
+        </button>
+
       </div>
 
     </div>
