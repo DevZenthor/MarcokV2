@@ -34,3 +34,19 @@ html {
   }
 
 }
+
+/* bloque sélection globale */
+body {
+  user-select: none;
+}
+
+/* autorise champs texte */
+input, textarea {
+  user-select: text;
+  cursor: text;
+}
+
+/* boutons / liens */
+button, a {
+  cursor: pointer;
+}

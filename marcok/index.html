@@ -6,8 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>marcok</title>
   </head>
+
   <body>
+
+    <!-- ROOT REACT -->
     <div id="root"></div>
+
+    <!-- 🎵 MUSIQUE -->
+    <audio id="bg-music" loop>
+      <source src="/music.mp4" type="audio/mp4">
+    </audio>
+
+    <!-- 🔘 BOUTON MUSIQUE -->
+    <button id="music-btn">🎵</button>
+
+    <!-- STYLE BOUTON -->
+    <style>
+      #music-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(45deg, red, yellow);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 999;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      #music-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px yellow;
+      }
+    </style>
+
+    <!-- SCRIPT MUSIQUE -->
+    <script>
+      const audio = document.getElementById("bg-music");
+      const btn = document.getElementById("music-btn");
+
+      let playing = false;
+
+      // démarrer au premier clic (obligatoire navigateur)
+      document.addEventListener("click", () => {
+        if (!playing) {
+          audio.play().catch(() => {});
+          playing = true;
+        }
+      });
+
+      // bouton play/pause
+      btn.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+    </script>
+
+    <!-- REACT -->
     <script type="module" src="/src/main.jsx"></script>
+
   </body>
 </html>
